@@ -155,7 +155,147 @@ todo-app: digest: sha256:5e5197c9513ef97b6c5ed8c3e0ab043a00dbbbdbc9098c67743fc54
 
 You must have Terraform installed on your system, AWS amazon account to create EC2 instance (I use free account for this Demo).
 
+1- Intialize Terraform:
+```sh
+terraform init
+```
 
+2- Apply Changes:
+```sh
+terraform Apply
+```
+
+3- Verify Changes:
+```sh
+Go to aws EC2 dashboard to verify creation
+```
+
+### Terraform Results:
+
+```markdown
+## ~/DevOps/Project1$ terraform init
+
+### Command Output:
+
+**Initializing the backend...
+Initializing provider plugins...
+- Finding hashicorp/aws versions matching "~> 4.16"...
+- Installing hashicorp/aws v4.67.0...
+- Installed hashicorp/aws v4.67.0 (signed by HashiCorp)
+Terraform has created a lock file .terraform.lock.hcl to record the provider
+selections it made above. Include this file in your version control repository
+so that Terraform can guarantee to make the same selections by default when
+you run "terraform init" in the future.
+
+Terraform has been successfully initialized!
+
+You may now begin working with Terraform. Try running "terraform plan" to see
+any changes that are required for your infrastructure. All Terraform commands
+should now work.
+
+If you ever set or change modules or backend configuration for Terraform,
+rerun this command to reinitialize your working directory. If you forget, other
+commands will detect it and remind you to do so if necessary.**
+
+```
+```markdown
+## ~/DevOps/Project1$ terraform apply
+
+### Command Output:
+
+**Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with
+the following symbols:
+  + create
+
+Terraform will perform the following actions:
+
+  # aws_instance.app_server will be created
+  + resource "aws_instance" "app_server" {
+      + ami                                  = "ami-04a81a99f5ec58529"
+      + arn                                  = (known after apply)
+      + associate_public_ip_address          = (known after apply)
+      + availability_zone                    = (known after apply)
+      + cpu_core_count                       = (known after apply)
+      + cpu_threads_per_core                 = (known after apply)
+      + disable_api_stop                     = (known after apply)
+      + disable_api_termination              = (known after apply)
+      + ebs_optimized                        = (known after apply)
+      + get_password_data                    = false
+      + host_id                              = (known after apply)
+      + host_resource_group_arn              = (known after apply)
+      + iam_instance_profile                 = (known after apply)
+      + id                                   = (known after apply)
+      + instance_initiated_shutdown_behavior = (known after apply)
+      + instance_state                       = (known after apply)
+      + instance_type                        = "t2.micro"
+      + ipv6_address_count                   = (known after apply)
+      + ipv6_addresses                       = (known after apply)
+      + key_name                             = (known after apply)
+      + monitoring                           = (known after apply)
+      + outpost_arn                          = (known after apply)
+      + password_data                        = (known after apply)
+      + placement_group                      = (known after apply)
+      + placement_partition_number           = (known after apply)
+      + primary_network_interface_id         = (known after apply)
+      + private_dns                          = (known after apply)
+      + private_ip                           = (known after apply)
+      + public_dns                           = (known after apply)
+      + public_ip                            = (known after apply)
+      + secondary_private_ips                = (known after apply)
+      + security_groups                      = (known after apply)
+      + source_dest_check                    = true
+      + subnet_id                            = (known after apply)
+      + tags                                 = {
+          + "Name" = "ExampleAppServerInstance"
+        }
+      + tags_all                             = {
+          + "Name" = "ExampleAppServerInstance"
+        }
+      + tenancy                              = (known after apply)
+      + user_data                            = (known after apply)
+      + user_data_base64                     = (known after apply)
+      + user_data_replace_on_change          = false
+      + vpc_security_group_ids               = (known after apply)
+
+      + capacity_reservation_specification (known after apply)
+
+      + cpu_options (known after apply)
+
+      + ebs_block_device (known after apply)
+
+      + enclave_options (known after apply)
+
+      + ephemeral_block_device (known after apply)
+
+      + maintenance_options (known after apply)
+
+      + metadata_options (known after apply)
+
+      + network_interface (known after apply)
+
+      + private_dns_name_options (known after apply)
+
+      + root_block_device (known after apply)
+    }
+
+Plan: 1 to add, 0 to change, 0 to destroy.
+
+Do you want to perform these actions?
+  Terraform will perform the actions described above.
+  Only 'yes' will be accepted to approve.
+
+  Enter a value: yes
+
+aws_instance.app_server: Creating...
+aws_instance.app_server: Still creating... [10s elapsed]
+aws_instance.app_server: Still creating... [20s elapsed]
+aws_instance.app_server: Still creating... [30s elapsed]
+aws_instance.app_server: Creation complete after 34s [id=i-0e5538da253b58f17]
+
+Apply complete! Resources: 1 added, 0 changed, 0 destroyed.**
+```
+
+## D- GitHub Actions to deploy the app to an EC2 instance:
 
 
 
@@ -163,4 +303,3 @@ You must have Terraform installed on your system, AWS amazon account to create E
 
 ## Conclusion
 This project integrates Docker, Terraform, AWS, and GitHub Actions to streamline the process of containerizing an application, provisioning infrastructure, and automating deployment.
-

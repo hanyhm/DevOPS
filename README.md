@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-# DevOps
-DevOps Tools Practice Repository
-=======
 # DevOps Tools Practice Repository
 
 Welcome to the DevOps Tools Practice Repository! 
@@ -41,23 +37,6 @@ This project is designed to help you gain hands-on experience with essential Dev
 
 #
 #
-#
-#
-#
-#
-#
-#
-#
-#
-#
-
-
-
-
-
-
-
-
 
 ## Contributing
 
@@ -69,5 +48,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ---
 
-Happy practicing! If you have any questions or need further assistance, feel free to open an issue or join the discussions in our community forum.
->>>>>>> daf5091 (Intial Commit)
+Happy practicing! If you have any questions or need further assistance, feel free to open an issue or ping me.
