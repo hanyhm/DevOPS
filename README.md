@@ -7,9 +7,23 @@ This project is designed to help you gain hands-on experience with essential Dev
 
 ## What You'll Learn
 
-- **Docker**: Learn how to containerize applications, manage Docker images, and orchestrate containers to create scalable and efficient environments.
-- **GitHub Actions**: Automate your workflows with GitHub Actions, enabling continuous integration and continuous delivery (CI/CD) pipelines to streamline your development process.
-- **Terraform**: Explore infrastructure as code (IaC) with Terraform, allowing you to define, provision, and manage cloud infrastructure efficiently and reliably.
+
+1. **Docker:** Learn how to containerize applications, manage Docker images, and orchestrate containers to create scalable and efficient environments.
+
+2. **GitHub Actions:** Automate your workflows with GitHub Actions, enabling continuous integration and continuous delivery (CI/CD) pipelines to streamline your development process.
+
+3. **Terraform:** Explore infrastructure as code (IaC) with Terraform, allowing you to define, provision, and manage cloud infrastructure efficiently and reliably.
+
+4. **Ansible:** Automate configuration management, application deployment, and task execution across your infrastructure with Ansible, using simple, human-readable YAML files.
+
+5. **Jenkins:** Set up and manage your CI/CD pipelines with Jenkins, integrating with various tools and services to automate the building, testing, and deployment of your applications.
+
+6. **Kubernetes (K8s):** Master container orchestration with Kubernetes, managing containerized applications across clusters with automated scaling, load balancing, and rolling updates.
+
+7. **Prometheus:** Monitor and alert on your applications and infrastructure with Prometheus, leveraging its powerful metrics collection and querying capabilities.
+
+8. **Grafana:** Visualize your metrics and logs with Grafana, creating insightful dashboards and reports to help you understand and optimize your systems.
+
 
 ## Getting Started
 
@@ -19,22 +33,10 @@ This project is designed to help you gain hands-on experience with essential Dev
    cd DevOps
    ```
 
-2. **Docker** - **GitHub Actions** - **Terraform**:
-   - Start with `Project1` directory in this reposiotry to learn docker, terraform, and GitHub Actions.
-   - Follow the `Project1` step by step guide to run all use cases and learn.
-
-   - Project architecture:
-   <img src="./diagram.png" alt="Project Diagram" width="500" height="300">
-
-   - Project practice use cases:
-
-     - Create a Docker image of NodeJS application.
-     - Upload the Docker image to Docker Hub.
-     - Provision AWS EC2 instances using Terraform.
-     - Automate the deployment of our application to AWS EC2 instances using GitHub Actions.
-
-3- This section will be updated once more projects added to the repo. 
-
+2. **CD into the project associated with the skill you need to master and follow each project instruction:
+   ```sh
+   cd Project #
+   ```
 #
 #
 
